@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 200px;
+    background: url(pokemon.jpg);
+    padding-bottom: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.listBtn {
+    position: relative;
+    display: block;
+    margin: auto;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 20px 20px;
+    cursor: pointer;
+    outline: none;
+    background-color: rgb(96, 151, 206);
+    border-radius: 15px;
+    font-weight: 1000;
+    color: rgb(249, 244, 244);
+    transition: 0.1s;
+    perspective: 1000px;
+}
+
+button#btnP.active {
+    transform: rotateX(0deg);
+}
+
+button#btnP.active {
+    transform: rotateX(90deg);
+}
+
+button#btnR {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.1s;
+    transform: translate(-50%, 100%);
+    z-index: 100;
+}
+
+button#btnR.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+}
+
+button:active {
+    background-color: rgb(95, 86, 224);
+    color: aliceblue;
+}
+
+#ulList {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    padding: 20px 0 50px 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 7px 7px 12px black;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+.card h3 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.card span {
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+}
+
+.card p {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
